@@ -1,0 +1,16 @@
+{
+  "name": "testBucketPlugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "invoke": "sls invoke local -f hello",
+    "deploy": "sls deploy --stage dev --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-plugin": "file:myPlugins/bucketPlugin"
+  }
+}

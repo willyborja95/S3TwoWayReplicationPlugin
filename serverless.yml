@@ -1,0 +1,20 @@
+service: aws-lambda-api
+frameworkVersion: '2'
+
+plugins:
+  - ./myPlugins/bucketPlugin
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+  region: us-east-1
+  stage: dev
+  profile: admin
+
+custom:
+  crossregions3:
+    buckets:
+      - bucket: my-own-bucket-willyborja95uio-2021
+        destinationBucket: my-own-bucket-willyborja95uio-2022
+        destinationRegion: us-weast-2
